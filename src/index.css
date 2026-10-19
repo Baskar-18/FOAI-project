@@ -1,0 +1,159 @@
+/* index.css - Modern Ultra-Premium Design System */
+
+:root {
+  --sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Unified VoyageAI ivory and teal palette */
+  --bg: #FAFBF8;
+  --nav-bg: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --card-inner-bg: #F3F8F5;
+  --text-h: #183D40;
+  --text-color: #385957;
+  --text-muted: #78908D;
+  --text-subtle: #98AAA6;
+  --border-color: #DFEAE6;
+  --border-hover: #BDD5CC;
+  --input-bg: #FFFFFF;
+  --hover-bg: #E3F5F0;
+
+  --primary: #16877F;
+  --primary-hover: #116E67;
+  --primary-dark: #145F5A;
+  --primary-light: #E3F5F0;
+  --primary-border: #A8D7CB;
+  --accent-coral: #FF9B71;
+
+  /* Success & state indicators */
+  --success: #16877F;
+  --success-dark: #116E67;
+  --success-light: #E3F5F0;
+  --accent-cyan: #0EA5E9;
+  --accent-amber: #F59E0B;
+  --accent-rose: #EF4444;
+
+  /* Soft modern shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(16, 24, 40, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(16, 24, 40, 0.05), 0 2px 6px -1px rgba(16, 24, 40, 0.03);
+  --shadow-lg: 0 12px 32px -4px rgba(16, 24, 40, 0.06), 0 4px 12px -2px rgba(16, 24, 40, 0.02);
+
+  --radius-xl: 16px;
+  --radius-lg: 14px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --card-radius: 14px;
+  --card-padding: 16px;
+  --radius-pill: 9999px;
+
+  font-family: var(--sans);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --bg: #0F172A;
+  --nav-bg: #1E293B;
+  --card-bg: #1E293B;
+  --card-inner-bg: #162032;
+  --text-h: #F8FAFC;
+  --text-color: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+  --border-color: #334155;
+  --border-hover: #475569;
+  --input-bg: #162032;
+  --hover-bg: #273449;
+
+  --primary: #4CB3A6;
+  --primary-hover: #68C8BA;
+  --primary-dark: #8BD3C2;
+  --primary-light: rgba(22, 135, 127, 0.18);
+  --primary-border: rgba(139, 211, 194, 0.42);
+  --accent-coral: #FF9B71;
+
+  --success: #4CB3A6;
+  --success-dark: #68C8BA;
+  --success-light: rgba(22, 135, 124, 0.18);
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 12px 32px -4px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-color);
+  font-family: var(--sans);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(22, 135, 127, 0.16);
+  color: var(--text-h);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading);
+  letter-spacing: -0.015em;
+  color: var(--text-h);
+  margin-top: 0;
+}
+
+/* Subtle fade-in animation */
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
